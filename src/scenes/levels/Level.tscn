@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhj535urjaksi"]
+
+[ext_resource type="Script" path="res://src/scenes/levels/level.gd" id="1_c581x"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_c581x")
+
+[node name="GridMap" type="GridMap" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 5, 5, 11)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, 0, -0.5, 0.353553, 0.707107, 0.612372, 0.353553, -0.707107, 0.612372, 0, 3, 9)

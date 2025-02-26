@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpe2gweyspb8p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fbidv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_346c8"]
+material = SubResource("ShaderMaterial_fbidv")
+
+[sub_resource type="Animation" id="Animation_i8l8o"]
+resource_name = "Spawn"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.5, -0.5, 0.5, 0.366667, 1, 0.5, -3.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_3g64l"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.5, -0.5, 0.5)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eef3x"]
+_data = {
+"RESET": SubResource("Animation_3g64l"),
+"Spawn": SubResource("Animation_i8l8o")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n6gbq"]
+animation = &"Spawn"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eshsf"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2ywhw"]
+states/Spawn/node = SubResource("AnimationNodeAnimation_n6gbq")
+states/Spawn/position = Vector2(478.667, 98.8889)
+states/Start/position = Vector2(228, 100.815)
+transitions = ["Start", "Spawn", SubResource("AnimationNodeStateMachineTransition_eshsf")]
+
+[node name="TestTile" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, 0.5)
+mesh = SubResource("BoxMesh_346c8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eef3x")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_2ywhw")
+anim_player = NodePath("../AnimationPlayer")

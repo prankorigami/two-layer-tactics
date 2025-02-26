@@ -1,0 +1,8 @@
+res://src/scenes/units/unit.tscn
+res://src/materials/test_tile.tres
+res://src/scenes/units/unit.gd
+res://src/scenes/units/attack.gd
+res://src/attacks/attack.gd
+res://src/scenes/levels/level.gd
+res://src/scenes/levels/Level.tscn
+res://src/scenes/levels/tiles/test_tile.tscn
