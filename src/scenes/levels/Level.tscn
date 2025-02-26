@@ -8,7 +8,7 @@ script = ExtResource("1_c581x")
 [node name="GridMap" type="GridMap" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 5, 5, 11)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 5, 4, 12)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

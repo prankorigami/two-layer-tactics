@@ -18,7 +18,7 @@ func _ready() -> void:
 			var currTile = testTile.instantiate()
 			add_child(currTile)
 			currTile.translate(Vector3(i, 0, j))
-			await get_tree().create_timer(0.01).timeout
+			await get_tree().create_timer(0.001).timeout
 			# spawn a tile at the current location in the air
 			#currTile = testAirTile.instantiate()
 			#add_child(currTile)

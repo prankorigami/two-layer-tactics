@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c73gmr2x34li7"]
+
+[ext_resource type="Script" path="res://src/scenes/units/test_unit.gd" id="1_8tfsw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvwsl"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7xsov"]
+material = SubResource("StandardMaterial3D_yvwsl")
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="TestUnit" type="Node"]
+script = ExtResource("1_8tfsw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.25, 0.5)
+mesh = SubResource("BoxMesh_7xsov")
