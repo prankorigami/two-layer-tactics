@@ -1,8 +1,9 @@
-Label
-TextureRect
-Panel
-VBoxContainer
 Button
+VBoxContainer
+Label
+Panel
+ItemList
+TextureRect
 Node3D
 CollisionShape3D
 Area3D
@@ -11,5 +12,3 @@ AnimationPlayer
 GridMap
 MeshInstance3D
 Unit
-AnimationTree
-DirectionalLight3D

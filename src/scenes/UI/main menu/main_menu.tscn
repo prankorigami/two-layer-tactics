@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://l116gb22hfmp"]
 
-[ext_resource type="Texture2D" uid="uid://dvf38hu8xq0q" path="res://src/scenes/UI/TriangleGameJamArea1Concept.png" id="1_03i63"]
-[ext_resource type="Script" path="res://src/scenes/UI/main_menu.gd" id="1_lsnhh"]
+[ext_resource type="Texture2D" uid="uid://dvf38hu8xq0q" path="res://src/scenes/UI/main menu/TriangleGameJamArea1Concept.png" id="1_03i63"]
+[ext_resource type="Script" path="res://src/scenes/UI/main menu/main_menu.gd" id="1_lsnhh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ovpy3"]
 texture = ExtResource("1_03i63")

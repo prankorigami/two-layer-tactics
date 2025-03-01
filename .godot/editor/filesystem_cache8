@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740854397
+::res://::1740866298
 icon.svg::CompressedTexture2D::1320240704511346423::1740851619::1740851842::1::::<><>::
 ::res://ArtAssets/::1740851843
 SimpleGroundUntext_02.fbx::PackedScene::3228765892861343724::1740851619::1740851842::1::::<><>::
@@ -10,16 +10,24 @@ debug_camera.gd::GDScript::-1::1740851619::0::1::::<>Camera3D<>::
 attack.gd::GDScript::-1::1740851619::0::1::::Attack<>Node<>::
 ::res://src/scenes/::1740852304
 GameManager.gd::GDScript::-1::1740851619::0::1::::<>Node<>::
-::res://src/scenes/levels/::1740854962
+::res://src/scenes/levels/::1740864461
 level.gd::GDScript::-1::1740851619::0::1::::<>Node3D<>::
-Level.tscn::PackedScene::2898195108339230788::1740854962::0::1::::<><>::res://src/scenes/levels/level.gd<>uid://v3e5meytt7ll::::res://src/scenes/levels/tiles/TileMeshLib.tres<>res://src/debug_camera.gd
+Level.tscn::PackedScene::2898195108339230788::1740864461::0::1::::<><>::res://src/scenes/levels/level.gd<>uid://v3e5meytt7ll::::res://src/scenes/levels/tiles/TileMeshLib.tres<>res://src/debug_camera.gd
 ::res://src/scenes/levels/tiles/::1740852224
 TileMeshLib.tres::MeshLibrary::1532065372876610633::1740852224::0::1::::<><>::
 TileMeshLibrary.tscn::PackedScene::6089456591540107210::1740851620::0::1::::<><>::uid://bmabkjyrqukd5::::res://ArtAssets/SimpleGroundUntext_02.fbx
-::res://src/scenes/UI/::1740855278
-main_menu.tscn::PackedScene::827385420994914371::1740855070::0::1::::<><>::
-TriangleGameJamArea1Concept.png::CompressedTexture2D::254273795980438442::1740855278::1740855279::1::::<><>::
-::res://src/scenes/units/::1740854962
+::res://src/scenes/UI/::1740864494
+::res://src/scenes/UI/Help Menu/::1740867137
+1966.png::CompressedTexture2D::4099376736073913362::1740867137::1740867137::1::::<><>::
+lore.tscn::PackedScene::5042175869147515598::1740866314::0::1::::<><>::
+controls.tscn::PackedScene::1810233418973751431::1740866516::0::1::::<><>::
+credits.tscn::PackedScene::2443366493332468382::1740867073::0::1::::<><>::
+TileA1T1Concept.png::CompressedTexture2D::5707591899360893839::1740864578::1740864578::1::::<><>::
+::res://src/scenes/UI/main menu/::1740864466
+main_menu.gd::GDScript::-1::1740863864::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::827385420994914371::1740864466::0::1::::<><>::uid://dvf38hu8xq0q::::res://src/scenes/UI/main menu/TriangleGameJamArea1Concept.png<>res://src/scenes/UI/main menu/main_menu.gd
+TriangleGameJamArea1Concept.png::CompressedTexture2D::254273795980438442::1740855278::1740864457::1::::<><>::
+::res://src/scenes/units/::1740864461
 test_unit.gd::GDScript::-1::1740851620::0::1::::<>Unit<>::
-test_unit.tscn::PackedScene::7077073608090626340::1740854962::0::1::::<><>::res://src/scenes/units/test_unit.gd
+test_unit.tscn::PackedScene::7077073608090626340::1740864461::0::1::::<><>::res://src/scenes/units/test_unit.gd
 unit.gd::GDScript::-1::1740851620::0::1::::Unit<>Node3D<>::

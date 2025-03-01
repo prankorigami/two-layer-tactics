@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd3p5ujon5hso"]
+
+[ext_resource type="Texture2D" uid="uid://byn1evecm6moo" path="res://src/scenes/UI/Help Menu/1966.png" id="1_evc4l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12d4e"]
+
+[node name="HelpMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_12d4e")
+text = "T.AL.O.N.
+(Total Air and Land or Nothing)
+
+As time rages forth, and demise becomes imminent,
+galaxies and universes begin to collapse. Man's only escape is to another
+world.
+
+There exists a dimension, untouched and uninhabited by man. However,
+you're not the only one looking for a new home... "
+horizontal_alignment = 1
+
+[node name="1966" type="Sprite2D" parent="."]
+position = Vector2(61, 598)
+scale = Vector2(0.233333, 0.231651)
+texture = ExtResource("1_evc4l")

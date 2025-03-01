@@ -17,7 +17,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_help_pressed() -> void:
-	print("Help Pressed")
+	get_tree().change_scene_to_file("res://src/scenes/UI/Help Menu/help_menu.tscn")
 
 
 func _on_exit_pressed() -> void:
