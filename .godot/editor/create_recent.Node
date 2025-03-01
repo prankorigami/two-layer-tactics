@@ -1,7 +1,10 @@
+Node3D
+CollisionShape3D
+Area3D
+Node
 AnimationPlayer
 GridMap
 MeshInstance3D
-Node
 Unit
 AnimationTree
 DirectionalLight3D
