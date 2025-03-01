@@ -1,8 +1,5 @@
-res://src/scenes/levels/Level.tscn
 res://src/scenes/levels/tiles/TileMeshLib.tres
-res://src/scenes/levels/tiles/TileMeshLibrary.tscn
+res://src/scenes/UI/main_menu.tscn
+res://src/scenes/levels/Level.tscn
 res://src/scenes/units/test_unit.tscn
-res://src/scenes/levels/level.gd
-res://src/scenes/units/unit.gd
-res://src/scenes/units/test_unit.gd
-res://src/scenes/GameManager.gd
+res://src/scenes/UI/main_menu.gd

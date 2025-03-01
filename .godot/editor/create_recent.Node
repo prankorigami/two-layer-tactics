@@ -1,3 +1,8 @@
+Label
+TextureRect
+Panel
+VBoxContainer
+Button
 Node3D
 CollisionShape3D
 Area3D
@@ -8,4 +13,3 @@ MeshInstance3D
 Unit
 AnimationTree
 DirectionalLight3D
-Camera3D
