@@ -9,6 +9,8 @@ var yPos = 0
 var transLength = 0.75
 var moving = false
 
+signal camera_move(direction)
+
 func _process(delta: float) -> void:
 	deltaCam = Vector3(0, 0 ,0)
 	deltaRot = Vector3(0, 0, 0)
@@ -20,6 +22,7 @@ func _process(delta: float) -> void:
 		deltaCam = order[ordIdx] - currentPos
 		deltaRot = Vector3(0, -1 * PI / 2, 0)
 		move = true
+		camera_move.emit(-1)
 	# move camera right
 	elif Input.is_action_just_pressed("move_right") and not moving:
 		ordIdx += 1
@@ -27,6 +30,7 @@ func _process(delta: float) -> void:
 		deltaCam = order[ordIdx] - currentPos
 		deltaRot = Vector3(0, PI / 2, 0)
 		move = true
+		camera_move.emit(1)
 	# move camera up
 	elif Input.is_action_just_pressed("move_forward") and yPos == 0 and not moving:
 		deltaCam = Vector3(0, 2, 0)

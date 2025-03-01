@@ -6,3 +6,6 @@ res://src/scenes/levels/level.gd
 res://src/scenes/units/unit.gd
 res://src/scenes/units/test_unit.gd
 res://src/scenes/GameManager.gd
+res://src/scenes/units/selection.gd
+res://src/scenes/levels/selection_square.gd
+res://src/debug_camera.gd

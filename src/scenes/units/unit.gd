@@ -16,8 +16,3 @@ func set_location(new_x, new_y, new_z):
 	position.y = new_y
 	position.z = new_z
 	unit_moved.emit(self, oldpos, position.y * 100 + position.x * 10 + position.z)
-	
-	
-func _ready() -> void:
-	await get_tree().create_timer(2).timeout
-	self.set_location(1, 0, 7)
