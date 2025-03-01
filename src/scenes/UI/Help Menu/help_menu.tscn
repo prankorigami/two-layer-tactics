@@ -1,18 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dy6bgwalv41kg"]
+[gd_scene load_steps=3 format=3 uid="uid://dy6bgwalv41kg"]
 
-[ext_resource type="Script" path="res://src/scenes/UI/Help Menu/help_menu.gd" id="1_actn6"]
+[ext_resource type="Texture2D" uid="uid://byn1evecm6moo" path="res://src/scenes/UI/Help Menu/1966.png" id="1_l30rp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_623u4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8c8v"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4fi0"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fspn"]
-bg_color = Color(0.485703, 0.485704, 0.485703, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5trk"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12d4e"]
 
 [node name="HelpMenu" type="Control"]
 layout_mode = 3
@@ -21,92 +11,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_actn6")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_12d4e")
+text = "T.AL.O.N.
+(Total Air and Land or Nothing)
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -171.5
-offset_top = -317.0
-offset_right = 171.5
-offset_bottom = -153.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_623u4")
-text = "Help Menu"
+As time rages forth, and demise becomes imminent,
+galaxies and universes begin to collapse. Man's only escape is to another
+world.
+
+There exists a dimension, untouched and uninhabited by man. However,
+you're not the only one looking for a new home... "
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -198.0
-offset_top = -85.5
-offset_right = 198.0
-offset_bottom = 85.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 5
-
-[node name="controls button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_a8c8v")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i4fi0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8fspn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5trk")
-text = "Controls"
-
-[node name="lore button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_a8c8v")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i4fi0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8fspn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5trk")
-text = "Lore"
-
-[node name="credits button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_a8c8v")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i4fi0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8fspn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5trk")
-text = "Credits"
-
-[connection signal="pressed" from="VBoxContainer/controls button" to="." method="_on_controls_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/lore button" to="." method="_on_lore_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/credits button" to="." method="_on_credits_button_pressed"]
+[node name="1966" type="Sprite2D" parent="."]
+position = Vector2(61, 598)
+scale = Vector2(0.233333, 0.231651)
+texture = ExtResource("1_l30rp")
