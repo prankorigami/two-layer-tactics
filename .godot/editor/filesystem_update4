@@ -15,3 +15,6 @@ res://src/scenes/levels/move_button.gd
 res://src/attacks/attack.gd
 res://src/scenes/units/tank.tscn
 res://src/scenes/units/tank.gd
+res://src/scenes/levels/tiles/TileMeshLibrary.tres
+res://src/scenes/levels/tiles/ROCKLIBRARY.tscn
+res://src/scenes/levels/tiles/RockMeshLibrary.tres

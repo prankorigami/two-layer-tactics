@@ -26,9 +26,8 @@ func _process(delta: float) -> void:
 			var curr_x = position.x - 0.5
 			var curr_y = 0 if position.y < 1 else 1
 			var curr_z = position.z - 0.5
-			var pos = curr_y * 100 + curr_x * 10 + curr_z
+			var pos = int(curr_y * 100 + curr_x * 10 + curr_z)
 			if not unit_selected and game_board.has_board_pos(pos):
-				if game_board.get_board_pos(pos) is Unit:
 					select_unit.emit(pos)
 					unit_selected = true
 			if unit_selected and moving and not game_board.has_board_pos(pos):

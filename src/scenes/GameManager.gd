@@ -15,18 +15,19 @@ func _ready() -> void:
 	%SelectionSquare.connect("move_unit", _on_move_unit)
 	%Back.connect("deselect", _on_deselect)
 	
+	game_board.init()
 	# ORDER OF OPERATIONS
 	# TODO: STEP 1: LET PLAYERS TAKE TURNS SELECTING UNIT TYPES AND PLACING THEM ON THE BOARD
 	var test_unit_1 = type_tank.instantiate()
 	add_child(test_unit_1)
 	test_unit_1.connect("unit_moved", game_board._on_move_unit)
-	test_unit_1.set_location(1, 1, 8)
+	test_unit_1.set_location(000, 1, 1, 8)
 	test_unit_1.team = true
 	
 	var test_unit_2 = type_tank.instantiate()
 	add_child(test_unit_2)
 	test_unit_2.connect("unit_moved", game_board._on_move_unit)
-	test_unit_2.set_location(7, 0, 2)
+	test_unit_2.set_location(000, 7, 0, 2)
 	test_unit_2.team = false
 	
 	%EnergyLabel.text = "Energy left: " + str(current_energy)
@@ -121,7 +122,7 @@ func valid_move(unit, newpos):
 		tween.play()
 		await get_tree().create_timer(0.05).timeout
 	
-	unit.set_location(new_x, new_y, new_z)
+	unit.set_location(oldpos, new_x, new_y, new_z)
 	current_energy -= dist
 	check_turn()
 	return true

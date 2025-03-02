@@ -1,12 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs01pwg3648k1"]
+[gd_scene load_steps=4 format=3 uid="uid://cs01pwg3648k1"]
 
-[ext_resource type="PackedScene" uid="uid://bmabkjyrqukd5" path="res://ArtAssets/SimpleGroundUntext_02.fbx" id="1_u5cxx"]
+[ext_resource type="PackedScene" uid="uid://b2sbsbo24njpp" path="res://ArtAssets/BLOCK_Ground.fbx" id="1_7wop1"]
+[ext_resource type="PackedScene" uid="uid://bxfkj2ss52mbs" path="res://ArtAssets/BLOCK_Rock1.fbx" id="2_eg2q3"]
+[ext_resource type="PackedScene" uid="uid://baav6vdj5etjg" path="res://ArtAssets/BLOCK_Water.fbx" id="3_1ngor"]
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
 
-[node name="SimpleGroundUntext_02" parent="." instance=ExtResource("1_u5cxx")]
+[node name="BLOCK_Ground" parent="." instance=ExtResource("1_7wop1")]
 
-[node name="Ground1City2" parent="SimpleGroundUntext_02" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="BLOCK_Rock1" parent="." instance=ExtResource("2_eg2q3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
 
-[editable path="SimpleGroundUntext_02"]
+[node name="BLOCK_Water" parent="." instance=ExtResource("3_1ngor")]
