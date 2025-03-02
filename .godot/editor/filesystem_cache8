@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://::1740929181
 icon.svg::CompressedTexture2D::1320240704511346423::1740925949::1740926022::1::::<><>::
 ::res://ArtAssets/::1740929289
@@ -63,6 +64,8 @@ Mech.tscn::PackedScene::2865235961434301366::1740928758::0::1::::<><>::uid://clr
 ::res://src/scenes/units/Plane/::1740928930
 Plane.tscn::PackedScene::6192493897024821390::1740928930::0::1::::<><>::uid://c7cv0q2tsifrg::::res://ArtAssets/TALON_PLANE.fbx
 =======
+=======
+>>>>>>> Stashed changes
 ::res://::1740941185
 export_presets.cfg::TextFile::-1::1740931100::0::1::::<><>::
 icon.svg::CompressedTexture2D::1320240704511346423::1740528650::1740528661::1::::<><>::
@@ -130,4 +133,7 @@ Plane.tscn::PackedScene::6192493897024821390::1740930629::0::1::::<><>::uid://c7
 ::res://src/scenes/units/Tank/::1740930402
 tank.gd::GDScript::-1::1740900156::0::1::::<>Unit<>::
 tank.tscn::PackedScene::7077073608090626340::1740930402::0::1::::<><>::res://src/scenes/units/Tank/tank.gd<>uid://bawee2wojdjsk::::res://ArtAssets/TALON_TANK.fbx
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
