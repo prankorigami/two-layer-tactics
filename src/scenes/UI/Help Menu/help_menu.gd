@@ -11,13 +11,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_controls_button_pressed() -> void:
+func _on_controls_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/scenes/UI/Help Menu/controls.tscn")
 
 
-func _on_lore_button_pressed() -> void:
+func _on_lore_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/scenes/UI/Help Menu/lore.tscn")
-
-
-func _on_credits_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://src/scenes/UI/Help Menu/credits.tscn")

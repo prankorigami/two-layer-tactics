@@ -1,7 +1,7 @@
 Button
-VBoxContainer
 Label
 Panel
+VBoxContainer
 ItemList
 TextureRect
 Node3D
