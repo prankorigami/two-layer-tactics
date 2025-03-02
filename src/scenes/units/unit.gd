@@ -5,10 +5,10 @@ signal unit_moved(unit: Unit, oldpos, newpos)
 
 # the health of the unit
 var health
-# the max manhattan distance the unit can move
-var moveDisance
 # the list of attacks a unit can use (should usually just be 2)
 var attackList
+# the team the unit is on (0 or 1 lol)
+var team
 
 func set_location(new_x, new_y, new_z):
 	var oldpos = position.y * 100 + position.x * 10 + position.z

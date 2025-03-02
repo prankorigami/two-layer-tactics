@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 	deltaCam = Vector3(0, 0 ,0)
 	deltaRot = Vector3(0, 0, 0)
 	var move = false
+	
 	# move camera left
 	if Input.is_action_just_pressed("move_left") and not moving:
 		ordIdx -= 1
@@ -23,6 +24,7 @@ func _process(delta: float) -> void:
 		deltaRot = Vector3(0, -1 * PI / 2, 0)
 		move = true
 		camera_move.emit(-1)
+		
 	# move camera right
 	elif Input.is_action_just_pressed("move_right") and not moving:
 		ordIdx += 1
@@ -31,6 +33,7 @@ func _process(delta: float) -> void:
 		deltaRot = Vector3(0, PI / 2, 0)
 		move = true
 		camera_move.emit(1)
+		
 	# move camera up
 	elif Input.is_action_just_pressed("move_forward") and yPos == 0 and not moving:
 		deltaCam = Vector3(0, 2, 0)
