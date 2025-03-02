@@ -1,5 +1,22 @@
+res://src/scenes/levels/Level.tscn
 res://src/scenes/levels/tiles/TileMeshLib.tres
-res://src/scenes/units/Heli/heli.tscn
-res://src/scenes/units/Mech/Mech.tscn
-res://src/scenes/units/Plane/Plane.tscn
+res://src/scenes/levels/tiles/TileMeshLibrary.tscn
+res://src/scenes/units/test_unit.tscn
+res://src/scenes/levels/level.gd
+res://src/scenes/units/unit.gd
+res://src/scenes/units/test_unit.gd
+res://src/scenes/GameManager.gd
+res://src/scenes/units/selection.gd
+res://src/scenes/levels/selection_square.gd
+res://src/debug_camera.gd
+res://src/scenes/levels/options_ui.gd
+res://src/scenes/levels/back_button.gd
+res://src/scenes/levels/move_button.gd
+res://src/attacks/attack.gd
 res://src/scenes/units/tank.tscn
+res://src/scenes/units/tank.gd
+res://src/scenes/levels/tiles/TileMeshLibrary.tres
+res://src/scenes/levels/tiles/ROCKLIBRARY.tscn
+res://src/scenes/levels/tiles/RockMeshLibrary.tres
+res://src/scenes/UI/main menu/main_menu.tscn
+res://src/scenes/UI/bgm.tscn

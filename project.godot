@@ -14,6 +14,10 @@ config/name="Two Layer Tactics"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Bgm="*res://src/scenes/UI/bgm.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"

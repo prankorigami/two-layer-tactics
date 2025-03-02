@@ -1,4 +1,4 @@
-AnimationTree
+AudioStreamPlayer
 Label
 RichTextLabel
 Control
@@ -12,3 +12,4 @@ Sprite2D
 Container
 Panel
 Node
+CollisionShape3D
