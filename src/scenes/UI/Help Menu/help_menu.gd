@@ -17,3 +17,7 @@ func _on_controls_pressed() -> void:
 
 func _on_lore_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/scenes/UI/Help Menu/lore.tscn")
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/scenes/UI/main menu/main_menu.tscn")

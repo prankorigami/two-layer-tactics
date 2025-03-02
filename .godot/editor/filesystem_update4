@@ -7,3 +7,5 @@ res://src/scenes/UI/Help Menu/controls.tscn
 res://src/scenes/UI/Help Menu/credits.tscn
 res://src/scenes/UI/Help Menu/lore.tscn
 res://src/scenes/UI/Help Menu/help_menu.gd
+res://src/scenes/UI/Help Menu/controls.gd
+res://src/scenes/UI/Help Menu/lore.gd
