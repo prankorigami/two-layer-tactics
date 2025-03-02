@@ -12,3 +12,6 @@ res://src/debug_camera.gd
 res://src/scenes/levels/options_ui.gd
 res://src/scenes/levels/back_button.gd
 res://src/scenes/levels/move_button.gd
+res://src/attacks/attack.gd
+res://src/scenes/units/tank.tscn
+res://src/scenes/units/tank.gd
