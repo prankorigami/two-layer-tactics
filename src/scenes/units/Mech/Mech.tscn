@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg27auopg10jq"]
+[gd_scene load_steps=6 format=3 uid="uid://bg27auopg10jq"]
 
 [ext_resource type="PackedScene" uid="uid://clrvjg6u7sj1q" path="res://ArtAssets/TALON_MECH_03.fbx" id="1_efjgu"]
+[ext_resource type="Script" path="res://src/scenes/units/Mech/mech.gd" id="1_vacpa"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c383a"]
 animation = &"Idle"
@@ -16,8 +17,10 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(2, -29)
 
 [node name="Mech" type="Node3D"]
+script = ExtResource("1_vacpa")
 
 [node name="TALON_MECH_03" parent="." instance=ExtResource("1_efjgu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 0, 0.5)
 
 [node name="R_Hand" parent="TALON_MECH_03/group4/GEO" index="0"]
 transform = Transform3D(-1, 5.33703e-09, 8.72597e-08, -4.1359e-25, 0.998135, -0.0610485, 8.74228e-08, 0.0610485, 0.998135, 0, 0.0010185, -0.00169007)
@@ -44,7 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 0.998135, -0.0610485, 0, 0.0610485, 0.998135
 transform = Transform3D(1, -7.91876e-18, -1.29471e-16, 0, 0.998135, -0.0610485, 1.29713e-16, 0.0610485, 0.998135, -0.00516297, 0.0398077, 0.00449523)
 
 [node name="L_Forearm" parent="TALON_MECH_03/group4/GEO" index="8"]
-transform = Transform3D(1, -4.56416e-19, -7.46234e-18, 0, 0.998135, -0.0610485, 7.47629e-18, 0.0610485, 0.998135, -0.0153932, 0.0381855, 0.00275668)
+transform = Transform3D(1, -4.56417e-19, -7.46235e-18, 0, 0.998135, -0.0610485, 7.47629e-18, 0.0610485, 0.998135, -0.0153932, 0.0381855, 0.00275668)
 
 [node name="L_Calf" parent="TALON_MECH_03/group4/GEO" index="9"]
 transform = Transform3D(0.999654, -0.00696356, 0.0253845, -1.48409e-05, 0.964223, 0.265094, -0.0263223, -0.265002, 0.963888, -0.00552042, 0.0138832, 0.000478384)
@@ -53,7 +56,7 @@ transform = Transform3D(0.999654, -0.00696356, 0.0253845, -1.48409e-05, 0.964223
 transform = Transform3D(0.999654, -0.00696356, 0.0253845, -1.48409e-05, 0.964223, 0.265094, -0.0263223, -0.265002, 0.963888, -0.00626201, 0.0039467, 0.00410955)
 
 [node name="L_ULeg" parent="TALON_MECH_03/group4/GEO" index="11"]
-transform = Transform3D(0.999726, 0.00802686, -0.0220057, -0.0129441, 0.972295, -0.233399, 0.0195226, 0.233619, 0.972132, -0.00375285, 0.0249975, 0.00236665)
+transform = Transform3D(0.999726, 0.00802685, -0.0220057, -0.0129441, 0.972295, -0.233399, 0.0195226, 0.233619, 0.972132, -0.00375285, 0.0249975, 0.00236665)
 
 [node name="pCube4" parent="TALON_MECH_03/group4/GEO" index="12"]
 transform = Transform3D(1, 0, 0, 0, 0.993254, 0.115957, 0, -0.115957, 0.993254, 0, 0.0266468, 0.00141607)

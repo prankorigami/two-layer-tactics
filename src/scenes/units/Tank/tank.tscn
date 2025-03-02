@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c73gmr2x34li7"]
 
-[ext_resource type="Script" path="res://src/scenes/units/tank.gd" id="1_1g04y"]
+[ext_resource type="Script" path="res://src/scenes/units/Tank/tank.gd" id="1_1g04y"]
 [ext_resource type="PackedScene" uid="uid://bawee2wojdjsk" path="res://ArtAssets/TALON_TANK.fbx" id="2_mgu1m"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1ty2t"]

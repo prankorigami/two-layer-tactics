@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1740929181
 icon.svg::CompressedTexture2D::1320240704511346423::1740925949::1740926022::1::::<><>::
 ::res://ArtAssets/::1740929289
@@ -61,3 +62,72 @@ heli.tscn::PackedScene::6966833514350579258::1740928753::0::1::::<><>::uid://cot
 Mech.tscn::PackedScene::2865235961434301366::1740928758::0::1::::<><>::uid://clrvjg6u7sj1q::::res://ArtAssets/TALON_MECH_03.fbx
 ::res://src/scenes/units/Plane/::1740928930
 Plane.tscn::PackedScene::6192493897024821390::1740928930::0::1::::<><>::uid://c7cv0q2tsifrg::::res://ArtAssets/TALON_PLANE.fbx
+=======
+::res://::1740941185
+export_presets.cfg::TextFile::-1::1740931100::0::1::::<><>::
+icon.svg::CompressedTexture2D::1320240704511346423::1740528650::1740528661::1::::<><>::
+::res://ArtAssets/::1740929329
+BLOCK_Ground.fbx::PackedScene::4318771198192750025::1740924464::1740924471::1::::<><>::
+BLOCK_Rock1.fbx::PackedScene::4011710665006889692::1740924465::1740924471::1::::<><>::
+BLOCK_Water.fbx::PackedScene::2387752208226203236::1740924465::1740924471::1::::<><>::
+SimpleGroundUntext_02.fbx::PackedScene::3228765892861343724::1740601101::1740601106::1::::<><>::
+T-MECH.fbx::PackedScene::8721123325642080027::1740851529::1740928147::1::::<><>::
+TALON_HELI.fbx::PackedScene::5796376176382076020::1740898403::1740898419::1::::<><>::
+TALON_MECH.fbx::PackedScene::1238342046740933754::1740898403::1740898419::1::::<><>::
+TALON_MECH_01.fbx::PackedScene::343329847359569316::1740929325::1740929329::1::::<><>::
+TALON_MECH_02.fbx::PackedScene::181607041705780273::1740929325::1740929329::1::::<><>::
+TALON_MECH_03.fbx::PackedScene::5581304562198042104::1740929325::1740929329::1::::<><>::
+TALON_PLANE.fbx::PackedScene::7024333703978045532::1740898403::1740898419::1::::<><>::
+TALON_TANK.fbx::PackedScene::2432088458193504506::1740898403::1740898419::1::::<><>::
+::res://src/::1740929495
+debug_camera.gd::GDScript::-1::1740929495::0::1::::<>Camera3D<>::
+::res://src/attacks/::1740899108
+attack.gd::GDScript::-1::1740899108::0::1::::Attack<>Node<>::
+::res://src/materials/::1740858079
+selection_square.png::CompressedTexture2D::7395868262303769269::1740858017::1740858079::1::::<><>::
+::res://src/scenes/::1740931077
+GameManager.gd::GDScript::-1::1740931077::0::1::::<>Node<>::
+::res://src/scenes/levels/::1740931359
+back_button.gd::GDScript::-1::1740898422::0::1::::<>Button<>::
+level.gd::GDScript::-1::1740927705::0::1::::<>Node3D<>::
+Level.tscn::PackedScene::2898195108339230788::1740931359::0::1::::<><>::res://src/scenes/levels/level.gd<>res://src/debug_camera.gd<>res://src/scenes/GameManager.gd<>uid://by3s0bohkm76i::::res://src/scenes/levels/tiles/TileMeshLibrary.tres<>res://src/scenes/levels/selection_square.gd<>uid://cr8inr36hroaf::::res://src/scenes/levels/tiles/RockMeshLibrary.tres<>uid://ddmu4tn44o8xd::::res://src/materials/selection_square.png<>res://src/scenes/levels/options_ui.gd<>res://src/scenes/levels/back_button.gd<>res://src/scenes/levels/move_button.gd
+move_button.gd::GDScript::-1::1740898422::0::1::::<>Button<>::
+options_ui.gd::GDScript::-1::1740898422::0::1::::<>Control<>::
+selection_square.gd::GDScript::-1::1740927692::0::1::::<>Node3D<>::
+::res://src/scenes/levels/tiles/::1740928140
+ROCKLIBRARY.tscn::PackedScene::7082150297593357148::1740925130::0::1::::<><>::uid://bxfkj2ss52mbs::::res://ArtAssets/BLOCK_Rock1.fbx
+RockMeshLibrary.tres::MeshLibrary::6034686063949633557::1740925212::0::1::::<><>::
+TileMeshLibrary.tres::MeshLibrary::4129893133319503750::1740925042::0::1::::<><>::
+TileMeshLibrary.tscn::PackedScene::6089456591540107210::1740925043::0::1::::<><>::uid://b2sbsbo24njpp::::res://ArtAssets/BLOCK_Ground.fbx<>uid://bxfkj2ss52mbs::::res://ArtAssets/BLOCK_Rock1.fbx<>uid://baav6vdj5etjg::::res://ArtAssets/BLOCK_Water.fbx
+::res://src/scenes/UI/::1740928851
+bgm.tscn::PackedScene::1222923138599630701::1740928851::0::1::::<><>::uid://cxt0vpo6sx5h4::::res://src/scenes/UI/TALON v2.wav
+TALON v2.wav::AudioStreamWAV::6427964185790252219::1740928363::1740928796::1::::<><>::
+::res://src/scenes/UI/Help Menu/::1740930400
+1966.png::CompressedTexture2D::4099376736073913362::1740928087::1740928146::1::::<><>::
+controls.gd::GDScript::-1::1740928087::0::1::::<>Control<>::
+controls.tscn::PackedScene::1810233418973751431::1740930400::0::1::::<><>::res://src/scenes/UI/Help Menu/controls.gd
+credits.tscn::PackedScene::2443366493332468382::1740928087::0::1::::<><>::
+help_menu.gd::GDScript::-1::1740928087::0::1::::<>Control<>::
+help_menu.tscn::PackedScene::8907862596566855386::1740928087::0::1::::<><>::res://src/scenes/UI/Help Menu/help_menu.gd
+lore.gd::GDScript::-1::1740928087::0::1::::<>Control<>::
+lore.tscn::PackedScene::5042175869147515598::1740928087::0::1::::<><>::uid://byn1evecm6moo::::res://src/scenes/UI/Help Menu/1966.png<>res://src/scenes/UI/Help Menu/lore.gd
+TileA1T1Concept.png::CompressedTexture2D::5707591899360893839::1740928087::1740928147::1::::<><>::
+::res://src/scenes/UI/main menu/::1740931006
+main_menu.gd::GDScript::-1::1740928087::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::827385420994914371::1740931006::0::1::::<><>::uid://dvf38hu8xq0q::::res://src/scenes/UI/main menu/TriangleGameJamArea1Concept.png<>res://src/scenes/UI/main menu/main_menu.gd
+TriangleGameJamArea1Concept.png::CompressedTexture2D::254273795980438442::1740928087::1740928147::1::::<><>::
+::res://src/scenes/units/::1740929675
+unit.gd::GDScript::-1::1740927626::0::1::::Unit<>Node3D<>::
+::res://src/scenes/units/Heli/::1740931063
+heli.gd::GDScript::-1::1740930279::0::1::::<>Unit<>::
+heli.tscn::PackedScene::6966833514350579258::1740931063::0::1::::<><>::res://src/scenes/units/Heli/heli.gd<>uid://cot2p65kargpw::::res://ArtAssets/TALON_HELI.fbx
+::res://src/scenes/units/Mech/::1740930841
+mech.gd::GDScript::-1::1740930274::0::1::::<>Unit<>::
+Mech.tscn::PackedScene::2865235961434301366::1740930841::0::1::::<><>::uid://clrvjg6u7sj1q::::res://ArtAssets/TALON_MECH_03.fbx<>res://src/scenes/units/Mech/mech.gd
+::res://src/scenes/units/Plane/::1740930629
+plane.gd::GDScript::-1::1740930287::0::1::::<>Unit<>::
+Plane.tscn::PackedScene::6192493897024821390::1740930629::0::1::::<><>::uid://c7cv0q2tsifrg::::res://ArtAssets/TALON_PLANE.fbx<>res://src/scenes/units/Plane/plane.gd
+::res://src/scenes/units/Tank/::1740930402
+tank.gd::GDScript::-1::1740900156::0::1::::<>Unit<>::
+tank.tscn::PackedScene::7077073608090626340::1740930402::0::1::::<><>::res://src/scenes/units/Tank/tank.gd<>uid://bawee2wojdjsk::::res://ArtAssets/TALON_TANK.fbx
+>>>>>>> Stashed changes

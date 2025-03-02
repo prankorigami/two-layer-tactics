@@ -1,6 +1,9 @@
 extends Node
 # the unit types a player can use
-@onready var type_tank = preload("res://src/scenes/units/tank.tscn")
+@onready var type_tank = preload("res://src/scenes/units/Tank/tank.tscn")
+@onready var type_plane = preload("res://src/scenes/units/Plane/Plane.tscn")
+@onready var type_heli = preload("res://src/scenes/units/Heli/heli.tscn")
+@onready var type_mech = preload("res://src/scenes/units/Mech/Mech.tscn")
 @onready var game_board = get_tree().root.get_node("Level")
 
 # dictate who's turn it is, true if p1, false if p2
@@ -18,17 +21,53 @@ func _ready() -> void:
 	game_board.init()
 	# ORDER OF OPERATIONS
 	# TODO: STEP 1: LET PLAYERS TAKE TURNS SELECTING UNIT TYPES AND PLACING THEM ON THE BOARD
-	var test_unit_1 = type_tank.instantiate()
-	add_child(test_unit_1)
-	test_unit_1.connect("unit_moved", game_board._on_move_unit)
-	test_unit_1.set_location(000, 1, 1, 8)
-	test_unit_1.team = true
+	var p1_tank = type_tank.instantiate()
+	add_child(p1_tank)
+	p1_tank.connect("unit_moved", game_board._on_move_unit)
+	p1_tank.set_location(000, 1, 0, 8)
+	p1_tank.team = true
 	
-	var test_unit_2 = type_tank.instantiate()
-	add_child(test_unit_2)
-	test_unit_2.connect("unit_moved", game_board._on_move_unit)
-	test_unit_2.set_location(000, 7, 0, 2)
-	test_unit_2.team = false
+	var p1_mech = type_mech.instantiate()
+	add_child(p1_mech)
+	p1_mech.connect("unit_moved", game_board._on_move_unit)
+	p1_mech.set_location(000, 0, 0, 1)
+	p1_mech.team = true
+	
+	var p1_heli = type_heli.instantiate()
+	add_child(p1_heli)
+	p1_heli.connect("unit_moved", game_board._on_move_unit)
+	p1_heli.set_location(000, 1, 1, 5)
+	p1_heli.team = true
+	
+	var p1_plane = type_plane.instantiate()
+	add_child(p1_plane)
+	p1_plane.connect("unit_moved", game_board._on_move_unit)
+	p1_plane.set_location(000, 2, 1, 2)
+	p1_plane.team = true
+	
+	var p2_mech = type_mech.instantiate()
+	add_child(p2_mech)
+	p2_mech.connect("unit_moved", game_board._on_move_unit)
+	p2_mech.set_location(000, 6, 0, 9)
+	p2_mech.team = false
+	
+	var p2_heli = type_heli.instantiate()
+	add_child(p2_heli)
+	p2_heli.connect("unit_moved", game_board._on_move_unit)
+	p2_heli.set_location(000, 8, 1, 1)
+	p2_heli.team = false
+	
+	var p2_tank = type_tank.instantiate()
+	add_child(p2_tank)
+	p2_tank.connect("unit_moved", game_board._on_move_unit)
+	p2_tank.set_location(000, 7, 0, 2)
+	p2_tank.team = false
+	
+	var p2_plane = type_plane.instantiate()
+	add_child(p2_plane)
+	p2_plane.connect("unit_moved", game_board._on_move_unit)
+	p2_plane.set_location(000, 6, 1, 4)
+	p2_plane.team = false
 	
 	%EnergyLabel.text = "Energy left: " + str(current_energy)
 
