@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg27auopg10jq"]
+
+[ext_resource type="PackedScene" uid="uid://clrvjg6u7sj1q" path="res://ArtAssets/TALON_MECH_03.fbx" id="1_efjgu"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c383a"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yj1ik"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u2mxo"]
+states/Idle/node = SubResource("AnimationNodeAnimation_c383a")
+states/Idle/position = Vector2(327, 94)
+states/Start/position = Vector2(160, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_yj1ik")]
+graph_offset = Vector2(2, -29)
+
+[node name="Mech" type="Node3D"]
+
+[node name="TALON_MECH_03" parent="." instance=ExtResource("1_efjgu")]
+
+[node name="R_Hand" parent="TALON_MECH_03/group4/GEO" index="0"]
+transform = Transform3D(-1, 5.33703e-09, 8.72597e-08, -4.1359e-25, 0.998135, -0.0610485, 8.74228e-08, 0.0610485, 0.998135, 0, 0.0010185, -0.00169007)
+
+[node name="R_UArm" parent="TALON_MECH_03/group4/GEO" index="1"]
+transform = Transform3D(-1, 5.33703e-09, 8.72597e-08, -4.1359e-25, 0.998135, -0.0610485, 8.74228e-08, 0.0610485, 0.998135, 3.33067e-18, 0.0010185, -0.00169007)
+
+[node name="R_Forearm" parent="TALON_MECH_03/group4/GEO" index="2"]
+transform = Transform3D(-1, 5.33703e-09, 8.72597e-08, -4.1359e-25, 0.998135, -0.0610485, 8.74228e-08, 0.0610485, 0.998135, 8.88178e-18, 0.0010185, -0.00169007)
+
+[node name="R_Calf" parent="TALON_MECH_03/group4/GEO" index="3"]
+transform = Transform3D(-0.999655, 0.00691361, -0.0253592, -5.64423e-05, 0.964221, 0.265098, -0.0262847, -0.265008, 0.963888, 9.19794e-05, 0.000850466, 0.000535254)
+
+[node name="R_Foot" parent="TALON_MECH_03/group4/GEO" index="4"]
+transform = Transform3D(-0.999655, 0.00691361, -0.0253592, -5.64423e-05, 0.964221, 0.265098, -0.0262847, -0.265008, 0.963888, 9.19797e-05, 0.000850466, 0.000535254)
+
+[node name="R_ULeg" parent="TALON_MECH_03/group4/GEO" index="5"]
+transform = Transform3D(-0.999726, -0.00797782, 0.0220225, -0.0129003, 0.972296, -0.233397, 0.0195504, 0.233617, 0.972132, 0.000139716, 0.00214464, -0.00551571)
+
+[node name="L_Hand" parent="TALON_MECH_03/group4/GEO" index="6"]
+transform = Transform3D(1, 0, 0, 0, 0.998135, -0.0610485, 0, 0.0610485, 0.998135, -0.0202617, 0.0240653, -0.00303381)
+
+[node name="L_UArm" parent="TALON_MECH_03/group4/GEO" index="7"]
+transform = Transform3D(1, -7.91876e-18, -1.29471e-16, 0, 0.998135, -0.0610485, 1.29713e-16, 0.0610485, 0.998135, -0.00516297, 0.0398077, 0.00449523)
+
+[node name="L_Forearm" parent="TALON_MECH_03/group4/GEO" index="8"]
+transform = Transform3D(1, -4.56416e-19, -7.46234e-18, 0, 0.998135, -0.0610485, 7.47629e-18, 0.0610485, 0.998135, -0.0153932, 0.0381855, 0.00275668)
+
+[node name="L_Calf" parent="TALON_MECH_03/group4/GEO" index="9"]
+transform = Transform3D(0.999654, -0.00696356, 0.0253845, -1.48409e-05, 0.964223, 0.265094, -0.0263223, -0.265002, 0.963888, -0.00552042, 0.0138832, 0.000478384)
+
+[node name="L_Foot" parent="TALON_MECH_03/group4/GEO" index="10"]
+transform = Transform3D(0.999654, -0.00696356, 0.0253845, -1.48409e-05, 0.964223, 0.265094, -0.0263223, -0.265002, 0.963888, -0.00626201, 0.0039467, 0.00410955)
+
+[node name="L_ULeg" parent="TALON_MECH_03/group4/GEO" index="11"]
+transform = Transform3D(0.999726, 0.00802686, -0.0220057, -0.0129441, 0.972295, -0.233399, 0.0195226, 0.233619, 0.972132, -0.00375285, 0.0249975, 0.00236665)
+
+[node name="pCube4" parent="TALON_MECH_03/group4/GEO" index="12"]
+transform = Transform3D(1, 0, 0, 0, 0.993254, 0.115957, 0, -0.115957, 0.993254, 0, 0.0266468, 0.00141607)
+
+[node name="Torso" parent="TALON_MECH_03/group4/GEO" index="13"]
+transform = Transform3D(1, 0, 0, 0, 0.998135, -0.0610485, 0, 0.0610485, 0.998135, 8.88178e-18, 0.0284568, 0.0022608)
+
+[node name="Head" parent="TALON_MECH_03/group4/GEO" index="14"]
+transform = Transform3D(1, 0, 0, 0, 0.998135, -0.0610485, 0, 0.0610485, 0.998135, 0, 0.0438623, 0.00243951)
+
+[node name="Skeleton3D" parent="TALON_MECH_03/group4/JOINTS" index="0"]
+bones/0/rotation = Quaternion(-0.0580767, 0, 0, 0.998312)
+bones/1/position = Vector3(0, 0.00259162, 0.000464384)
+bones/1/rotation = Quaternion(0.0885366, 0, 0, 0.996073)
+bones/9/rotation = Quaternion(6.12323e-17, 6.12323e-17, 1, 6.12303e-17)
+bones/10/rotation = Quaternion(-6.12323e-17, 6.12323e-17, 1, 6.12303e-17)
+bones/12/rotation = Quaternion(0.0541065, 0.657854, 0.0695462, 0.747973)
+bones/13/rotation = Quaternion(-0.0255609, -0.0159725, -0.248677, 0.968117)
+bones/15/rotation = Quaternion(0.0541088, -0.657786, -0.0695576, 0.748032)
+bones/16/rotation = Quaternion(-0.0255569, 0.0159731, 0.248678, 0.968117)
+
+[node name="ikHandle1" parent="TALON_MECH_03/group4/JOINTS" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00626202, 0.00394659, 0.00410956)
+
+[node name="AnimationTree" type="AnimationTree" parent="TALON_MECH_03"]
+tree_root = SubResource("AnimationNodeStateMachine_u2mxo")
+anim_player = NodePath("../AnimationPlayer")
+
+[editable path="TALON_MECH_03"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuhxp8ba6onfq"]
+
+[ext_resource type="PackedScene" uid="uid://c7cv0q2tsifrg" path="res://ArtAssets/TALON_PLANE.fbx" id="1_2ahh2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lja6v"]
+animation = &"Hover"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6g0m4"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_j5ni6"]
+states/Hover/node = SubResource("AnimationNodeAnimation_lja6v")
+states/Hover/position = Vector2(326, 105)
+transitions = ["Start", "Hover", SubResource("AnimationNodeStateMachineTransition_6g0m4")]
+graph_offset = Vector2(-10, -8)
+
+[node name="Plane" type="Node3D"]
+
+[node name="TALON_PLANE" parent="." instance=ExtResource("1_2ahh2")]
+
+[node name="Bomb" parent="TALON_PLANE" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Plane" parent="TALON_PLANE" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="AnimationTree" type="AnimationTree" parent="TALON_PLANE"]
+tree_root = SubResource("AnimationNodeStateMachine_j5ni6")
+anim_player = NodePath("../AnimationPlayer")
+
+[editable path="TALON_PLANE"]

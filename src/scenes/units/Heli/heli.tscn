@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6i1y3an7atgc"]
+
+[ext_resource type="PackedScene" uid="uid://cot2p65kargpw" path="res://ArtAssets/TALON_HELI.fbx" id="1_xmcfk"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lqfc5"]
+animation = &"Hover"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_68k82"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_700r5"]
+states/Hover/node = SubResource("AnimationNodeAnimation_lqfc5")
+states/Hover/position = Vector2(299, 101)
+states/Start/position = Vector2(131, 97)
+transitions = ["Start", "Hover", SubResource("AnimationNodeStateMachineTransition_68k82")]
+
+[node name="Heli" type="Node3D"]
+
+[node name="TALON_HELI" parent="." instance=ExtResource("1_xmcfk")]
+
+[node name="FanRight" parent="TALON_HELI/Helicopter" index="1"]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -0.2061, 0.195524, 0.338717)
+
+[node name="FanBack" parent="TALON_HELI/Helicopter" index="2"]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -0.702924, 0.467166, -0.000453094)
+
+[node name="FanRight1" parent="TALON_HELI/Helicopter" index="3"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -0.2061, 0.195524, -0.323733)
+
+[node name="AnimationTree" type="AnimationTree" parent="TALON_HELI"]
+tree_root = SubResource("AnimationNodeStateMachine_700r5")
+anim_player = NodePath("../AnimationPlayer")
+
+[editable path="TALON_HELI"]

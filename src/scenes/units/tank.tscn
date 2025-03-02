@@ -1,12 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://c73gmr2x34li7"]
+[gd_scene load_steps=6 format=3 uid="uid://c73gmr2x34li7"]
 
 [ext_resource type="Script" path="res://src/scenes/units/tank.gd" id="1_1g04y"]
 [ext_resource type="PackedScene" uid="uid://bawee2wojdjsk" path="res://ArtAssets/TALON_TANK.fbx" id="2_mgu1m"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1ty2t"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_itgvf"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_r08je"]
+states/Idle/node = SubResource("AnimationNodeAnimation_1ty2t")
+states/Idle/position = Vector2(335, 105)
+states/Start/position = Vector2(197, 105)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_itgvf")]
 
 [node name="Tank" type="Node3D"]
 script = ExtResource("1_1g04y")
 
 [node name="TALON_TANK" parent="." instance=ExtResource("2_mgu1m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="AnimationTree" type="AnimationTree" parent="TALON_TANK"]
+tree_root = SubResource("AnimationNodeStateMachine_r08je")
+anim_player = NodePath("../AnimationPlayer")
 
 [editable path="TALON_TANK"]
