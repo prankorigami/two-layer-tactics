@@ -72,4 +72,16 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_5e25t")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ldq7n")
 text = "Back"
 
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 78.0
+offset_right = 623.0
+offset_bottom = 319.0
+scale = Vector2(1.821, 2.001)
+text = "WASD- Camera Movement
+Shift- Switch layers
+Arrow keys- Move selection
+Enter- Select unit/Move unit"
+
 [connection signal="pressed" from="Button3" to="." method="_on_back_pressed"]

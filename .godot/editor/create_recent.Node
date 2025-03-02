@@ -1,3 +1,4 @@
+TextEdit
 AudioStreamPlayer
 Label
 RichTextLabel
@@ -12,4 +13,3 @@ Sprite2D
 Container
 Panel
 Node
-CollisionShape3D
