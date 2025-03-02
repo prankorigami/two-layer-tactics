@@ -28,6 +28,8 @@ func _ready() -> void:
 	test_unit_2.connect("unit_moved", game_board._on_move_unit)
 	test_unit_2.set_location(7, 0, 2)
 	test_unit_2.team = false
+	
+	%EnergyLabel.text = "Energy left: " + str(current_energy)
 
 func _on_unit_selection(position):
 	selected_unit = game_board.get_board_pos(position)
@@ -40,7 +42,6 @@ func _on_deselect():
 	%OptionsUI.visible = false
 	
 func _on_move_unit(position):
-	print("signal recieved")
 	valid_move(selected_unit, position)
 	
 # fuck doing actual path tracing ima just let you phase through mfers
@@ -58,8 +59,51 @@ func valid_move(unit, newpos):
 	var new_x = newpos / 10
 	var new_z = newpos % 10
 	
-	# calculate manhattan distance to position
-	var dist = abs(unit.position.x - new_x) + abs(unit.position.z - new_z)
+	# pathfind minimum distance to position with bfs
+	# FUUUUUUUUUUUUUUUUUUUUUUUUUCK
+	var oldpos = unit.position.x * 10 + unit.position.z + (1 if unit.position.y > 1 else 0) * 100
+	var dist = -1
+	var queue = [oldpos]
+	var explored = [oldpos]
+	var path = [[-1, oldpos]]
+	
+	
+	while(len(queue) > 0):
+		var current = queue.pop_front()
+		
+		# check the 4 adjacent edges
+		if(current - 10 >= 0 and (current - 10) not in explored and not game_board.has_board_pos(current - 10)):
+			explored.append(current - 10)
+			queue.append(current - 10)
+			path.append([current, current - 10])
+			if current - 10 == newpos:
+				break
+
+		if(current + 10 <= 199 and (current + 10) not in explored and not game_board.has_board_pos(current + 10)):
+			explored.append(current + 10)
+			queue.append(current + 10)
+			path.append([current, current + 10])
+			if current + 10 == newpos:
+				break
+
+		if((not int(current) % 10 == 0) and current - 1 >= 0 and (current - 1) not in explored and not game_board.has_board_pos(current - 1)):
+			explored.append(current - 1)
+			queue.append(current - 1)
+			path.append([current, current - 1])
+			if current - 1 == newpos:
+				break
+
+		if((not int(current) % 10 == 9) and current + 1 <= 199 and (current + 1) not in explored and not game_board.has_board_pos(current + 1)):
+			explored.append(current + 1)
+			queue.append(current + 1)
+			path.append([current, current + 1])
+			if current + 1 == newpos:
+				break
+	
+	for n in range(len(path) - 1, -1, -1):
+		if path[n][1] == newpos:
+			newpos = path[n][0]
+			dist += 1
 	
 	if dist > current_energy:
 		return false
@@ -70,7 +114,8 @@ func valid_move(unit, newpos):
 	return true
 
 func check_turn():
+	%EnergyLabel.text = "Energy left: " + str(current_energy)
 	if current_energy == 0:
 		current_energy = energy_per_turn
 		current_player = not current_player
-		print("next turn")
+		%TurnLabel.text = "Player 1's Turn" if current_player else "Player 2's Turn"

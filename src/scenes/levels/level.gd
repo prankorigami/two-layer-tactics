@@ -7,8 +7,8 @@ func _on_move_unit(unit, oldpos, newpos):
 	board.erase(oldpos)
 	board[newpos] = unit
 
-func get_board_pos(position):
-	return board[position]
+func get_board_pos(pos):
+	return board[pos]
 	
-func has_board_pos(position):
-	return board.has(position)
+func has_board_pos(pos):
+	return board.has(pos)

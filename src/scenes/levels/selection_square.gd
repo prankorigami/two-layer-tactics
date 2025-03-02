@@ -31,7 +31,6 @@ func _process(delta: float) -> void:
 				select_unit.emit(pos)
 				unit_selected = true
 			if unit_selected and moving and not game_board.has_board_pos(pos):
-				print("trying to move")
 				move_unit.emit(pos)
 				unit_selected = false
 				moving = false
@@ -86,7 +85,7 @@ func _process(delta: float) -> void:
 # note down the camera's new rotation
 func _on_camera_rotate(direction):
 	curr_rotate += direction
-	if curr_rotate == 0:
+	if curr_rotate == -1:
 		curr_rotate = 3
 	if curr_rotate == 4:
 		curr_rotate = 0

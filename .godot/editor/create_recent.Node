@@ -1,7 +1,9 @@
+Label
+RichTextLabel
+Control
 ColorRect
 Button
 VBoxContainer
-Control
 CanvasLayer
 MeshInstance3D
 Node3D
@@ -11,5 +13,3 @@ Panel
 Node
 CollisionShape3D
 Area3D
-AnimationPlayer
-GridMap
