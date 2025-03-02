@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://015jrupk8o3p"]
+
+[ext_resource type="Script" path="res://src/scenes/UI/Help Menu/controls.gd" id="1_bh6yl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2m0ih"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejdlf"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e25t"]
+bg_color = Color(0.443137, 0.443137, 0.443137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldq7n"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bh6yl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_2m0ih")
+text = "Controls:"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -555.0
+offset_top = 249.0
+offset_right = -388.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejdlf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5e25t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ldq7n")
+text = "Back"
+
+[connection signal="pressed" from="Button3" to="." method="_on_back_pressed"]
