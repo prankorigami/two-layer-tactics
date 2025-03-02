@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhj535urjaksi"]
+[gd_scene load_steps=14 format=3 uid="uid://bhj535urjaksi"]
 
 [ext_resource type="Script" path="res://src/scenes/levels/level.gd" id="1_c581x"]
 [ext_resource type="MeshLibrary" uid="uid://v3e5meytt7ll" path="res://src/scenes/levels/tiles/TileMeshLib.tres" id="2_ke044"]
@@ -23,9 +23,6 @@ albedo_color = Color(0, 0, 0, 0.54902)
 
 [sub_resource type="QuadMesh" id="QuadMesh_3h6oa"]
 material = SubResource("StandardMaterial3D_nj1kd")
-
-[sub_resource type="LabelSettings" id="LabelSettings_hxk58"]
-font_size = 70
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_c581x")
@@ -118,34 +115,3 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "BACK"
 script = ExtResource("8_1omsc")
-
-[node name="HUD" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TurnLabel" type="Label" parent="CanvasLayer/HUD"]
-unique_name_in_owner = true
-layout_mode = 1
-offset_left = 22.0
-offset_right = 531.0
-offset_bottom = 100.0
-text = "Player 1's turn"
-label_settings = SubResource("LabelSettings_hxk58")
-
-[node name="EnergyLabel" type="Label" parent="CanvasLayer/HUD"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -519.0
-offset_right = -10.0
-offset_bottom = 100.0
-grow_horizontal = 0
-text = "Energy left: "
-label_settings = SubResource("LabelSettings_hxk58")
-horizontal_alignment = 2

@@ -9,3 +9,6 @@ res://src/scenes/GameManager.gd
 res://src/scenes/units/selection.gd
 res://src/scenes/levels/selection_square.gd
 res://src/debug_camera.gd
+res://src/scenes/levels/options_ui.gd
+res://src/scenes/levels/back_button.gd
+res://src/scenes/levels/move_button.gd
