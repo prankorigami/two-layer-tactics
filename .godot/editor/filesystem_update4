@@ -18,3 +18,5 @@ res://src/scenes/units/tank.gd
 res://src/scenes/levels/tiles/TileMeshLibrary.tres
 res://src/scenes/levels/tiles/ROCKLIBRARY.tscn
 res://src/scenes/levels/tiles/RockMeshLibrary.tres
+res://src/scenes/UI/main menu/main_menu.tscn
+res://src/scenes/UI/bgm.tscn

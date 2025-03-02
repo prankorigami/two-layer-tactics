@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ronmoor2txbh"]
+
+[ext_resource type="AudioStream" uid="uid://cxt0vpo6sx5h4" path="res://src/scenes/UI/TALON v2.wav" id="1_olmso"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_olmso")
+volume_db = -5.0
+autoplay = true
