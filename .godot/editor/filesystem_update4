@@ -1,8 +1,9 @@
-res://src/scenes/levels/tiles/TileMeshLib.tres
 res://src/scenes/units/Heli/heli.tscn
-res://src/scenes/units/Mech/Mech.tscn
-res://src/scenes/units/Plane/Plane.tscn
-res://src/scenes/units/tank.tscn
-res://src/scenes/UI/Help Menu/controls.tscn
 res://src/scenes/levels/tiles/TileMeshLibrary.tres
 res://src/scenes/levels/tiles/RockMeshLibrary.tres
+res://src/scenes/levels/Level.tscn
+res://src/scenes/units/Mech/Mech.tscn
+res://src/scenes/UI/main menu/main_menu.tscn
+res://src/scenes/UI/Help Menu/controls.tscn
+res://src/scenes/units/Tank/tank.tscn
+res://src/scenes/units/Plane/Plane.tscn
